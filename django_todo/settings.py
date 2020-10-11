@@ -27,7 +27,7 @@ SECRET_KEY = 'zq!&%j0w(w6!d03tud=jahom1sx3_ay3(&1*=a1d@#mzj7k4_i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['todo-django-test-app.herokuapp.com']
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'django_todo.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backends.django.djangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
