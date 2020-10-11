@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Things I need to do:</h1>
+    <table>
+        {% for items in itemss %}
+            <tr>
+            {% if items.done %}
+                <td><strike>{{ items.name }}</strike></td>
+
+            {% else %}
+                <td>{{ items.name }}</td>
+            {% endif %}
+                <td>
+                    <a href="/edit/{{ items.id }}">
+                        <button>Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/toggle/{{ items.id }}">
+                        <button>Toggle</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/delete/{{ items.id }}">
+                        <button>Delete</button>
+                    </a>
+                </td>
+            </tr>
+        {% empty %}
+        <tr><td>You have nothing to do</td></tr>
+        {% endfor %}
+    </table>
+    <a href="/add">Add an Item</a>
+</body>
+</html>
