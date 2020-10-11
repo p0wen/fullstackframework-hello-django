@@ -56,7 +56,7 @@ ROOT_URLCONF = 'django_todo.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.djangoTemplates',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
